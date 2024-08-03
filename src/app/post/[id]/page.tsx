@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 // import Link from "next/link";
 // import Apiloading from "@/app/loading";
 import Image from "next/image";
-
+import Loading from "./loading";
 import { Post } from "@/app/_type/post";
 
 const PostPage = ({ params }: { params: { id: string } }) => {
@@ -27,11 +27,11 @@ const PostPage = ({ params }: { params: { id: string } }) => {
     };
     fetcher();
   }, [id]);
+
   if (!post) {
     return (
       <div>
-        {/* <Apiloading /> */}
-        記事が見つかりません
+        <Loading />
       </div>
     );
   }

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Post } from "./_type/post";
-
 export default function Home() {
   const [post, setPost] = useState<Post[]>([]);
   useEffect(() => {
